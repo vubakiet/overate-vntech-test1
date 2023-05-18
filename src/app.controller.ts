@@ -10,8 +10,13 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get('sortArr')
-  getSortArray(@Body() array: Array<string | number>) {
-    return this.appService.getSortArray(array);
+  @Get('sortArrayByAscending')
+  getSortArrayByAscending(@Body() array: Array<string | number>) {
+    return this.appService.getSortArrayByAscending(array);
+  }
+
+  @Get('sortArrayByDescending')
+  getSortArrayByDescending(@Body() array: Array<string | number>) {
+    return this.appService.getSortArrayByDescending(array);
   }
 }
